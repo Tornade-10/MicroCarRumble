@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HUD" style="flex-grow: 1; flex-direction: row; -unity-text-align: upper-right; white-space: normal; text-overflow: clip; justify-content: flex-end; align-self: flex-end; align-items: flex-end; padding-top: 0; padding-right: 5%; padding-bottom: 5%; padding-left: 0;">
+        <ui:Label text="SPEED" name="Speed" style="right: 0; left: auto; top: 0; position: relative; opacity: 0.65; color: rgb(255, 98, 0); -unity-font-style: bold;" />
+        <ui:ProgressBar value="20" title="                                        " name="SpeedOmeter" high-value="120" usage-hints="-1" tabindex="0" focusable="false" style="background-color: rgba(0, 0, 0, 0); opacity: 0.65; -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0); margin-top: 4%; margin-right: 4%; margin-bottom: 4%; margin-left: 4%; padding-top: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

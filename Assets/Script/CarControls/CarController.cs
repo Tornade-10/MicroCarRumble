@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using PlayerControls;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.InputSystem;
+using Vector2 = System.Numerics.Vector2;
 
 public class CarController : MonoBehaviour
 {
@@ -34,10 +36,17 @@ public class CarController : MonoBehaviour
 
    public float moveInput;
    public float steerInput;
+   public bool lookInput = false;
 
    private Rigidbody carRB;
    private InputManager _controller;
-
+   
+   public CinemachineVirtualCamera backCamera;
+   public CinemachineVirtualCamera frontCamera;
+   
+   private int _activePriority = 15;
+   private int _inactivePriority = 10;
+   
    private void Start()
    {
       //_controller = GetComponent<InputManager>();
@@ -47,8 +56,8 @@ public class CarController : MonoBehaviour
 
    private void Update()
    {
-      GetInputs();
       AnimationsWheels();
+      CameraLook();
    }
 
    private void FixedUpdate()
@@ -56,19 +65,28 @@ public class CarController : MonoBehaviour
       Move();
       Steer();
    }
+   
+   
+   // Forward
 
-   void GetInputs()
+   void OnForward(InputValue value)
    {
-      moveInput = Input.GetAxis("Jump");
-      steerInput = Input.GetAxis("Horizontal");
+      moveInput = value.Get<float>();
    }
-
+   
    void Move()
    {
       foreach (var wheel in wheels)
       {
          wheel.wheelCollider.motorTorque = moveInput * maxAceleration;
       }
+   }
+
+   // Steer
+   
+   void OnSteer(InputValue value)
+   {
+      steerInput = value.Get<float>();
    }
 
    void Steer()
@@ -82,18 +100,39 @@ public class CarController : MonoBehaviour
          }
       }
    }
-
-   void Brake()
+   
+   // Brake
+   
+   void OnBrake(InputValue value)
    {
-      if(false)
+      moveInput = value.Get<float>() * -0.5f;
+      foreach (var wheel in wheels)
       {
-         foreach (var wheel in wheels)
-         {
-            wheel.wheelCollider.brakeTorque = 0;
-         }  
-      }
+         wheel.wheelCollider.brakeTorque = 0;
+      }  
    }
 
+   // Look
+   
+   void OnLookBehind(InputValue value)
+   {
+      lookInput = value.isPressed;
+   }
+
+   void CameraLook()
+   {
+      if (lookInput)
+      {
+         backCamera.Priority = _inactivePriority;
+         frontCamera.Priority = _activePriority;
+      }
+      else
+      {
+         backCamera.Priority = _activePriority;
+         frontCamera.Priority = _inactivePriority;
+      }
+   }
+   
    void AnimationsWheels()
    {
       foreach (var wheel in wheels)
@@ -103,7 +142,7 @@ public class CarController : MonoBehaviour
          wheel.wheelCollider.GetWorldPose(out position, out rotation);
          wheel.WheelModel.transform.position = position;
          wheel.WheelModel.transform.rotation = rotation;
-
       }
    }
+   
 }

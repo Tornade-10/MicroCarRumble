@@ -27,7 +27,16 @@
                     "name": "Steer",
                     "type": "Value",
                     "id": "37dd94c6-be5a-4b66-8762-f1af4083013a",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LookBehind",
+                    "type": "Value",
+                    "id": "173d23da-e518-49c6-ae49-44d3c7d4a993",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -38,28 +47,6 @@
                     "name": "",
                     "id": "e2abbced-e603-4fac-af1f-33ce3fac337e",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Forward",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "738c9d2b-287b-49a4-9ff5-e799410fef89",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Forward",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ea1bdd78-ab84-493c-b86c-090bdc029008",
-                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -102,8 +89,8 @@
                 },
                 {
                     "name": "",
-                    "id": "96ba4f76-628f-4af5-a621-523b8a3b5f71",
-                    "path": "<Gamepad>/leftStick",
+                    "id": "e8f0967c-d5dc-43d7-88d7-f1199b587719",
+                    "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -112,9 +99,9 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "WASD",
-                    "id": "2c8aa168-748b-47ff-a5ce-c7bcfb6b05c7",
-                    "path": "2DVector(mode=1)",
+                    "name": "1D Axis",
+                    "id": "01720afd-0582-422a-9de3-dc300fde1191",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -123,8 +110,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "left",
-                    "id": "2ff4cbf3-dbfa-4c8f-bd6f-65082e71b45b",
+                    "name": "negative",
+                    "id": "c5b0a3dd-1a6f-4aeb-9697-e48dc727bf13",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -134,8 +121,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "right",
-                    "id": "111fb272-b7e4-4268-ab16-dd75ff57b801",
+                    "name": "positive",
+                    "id": "4697cd3b-eb86-4289-8f65-f8d97920e8c3",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -145,59 +132,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
-                    "id": "9a75eb4a-3848-4469-9c50-b8340c32cfb0",
-                    "path": "<Keyboard>/leftArrow",
+                    "name": "",
+                    "id": "2bdf2e59-beba-4232-b38e-7c00fbfb7f57",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steer",
+                    "action": "LookBehind",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "acf856ee-bc16-40f7-8531-08ca739d9571",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Steer",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "D-Pad",
-                    "id": "8a071348-1442-486f-984a-82fa25fc430d",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Steer",
-                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "left",
-                    "id": "eede6943-0812-490e-9968-9338a46cc23b",
-                    "path": "<Gamepad>/dpad/left",
+                    "name": "",
+                    "id": "7c789564-416a-4276-9912-c9e26f77240a",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steer",
+                    "action": "LookBehind",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "right",
-                    "id": "6deb0b71-7d82-4dab-9466-3e84ec29c324",
-                    "path": "<Gamepad>/dpad/right",
+                    "name": "",
+                    "id": "a1121c33-a43e-4f82-bb96-c767081cd931",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steer",
+                    "action": "LookBehind",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }
