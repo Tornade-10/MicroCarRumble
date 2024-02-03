@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
-using PlayerControls;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.InputSystem;
@@ -39,7 +38,6 @@ public class CarController : MonoBehaviour
    public bool lookInput = false;
 
    private Rigidbody carRB;
-   private InputManager _controller;
    
    public CinemachineVirtualCamera backCamera;
    public CinemachineVirtualCamera frontCamera;
