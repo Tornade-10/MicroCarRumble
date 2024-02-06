@@ -1220,8 +1220,8 @@ MonoBehaviour:
   moveInput: 0
   steerInput: 0
   lookInput: 0
-  backCamera: {fileID: 5605608705638295026}
-  frontCamera: {fileID: 8426538658547881695}
+  backCamera: {fileID: 0}
+  frontCamera: {fileID: 0}
 --- !u!1 &7998963817693473199
 GameObject:
   m_ObjectHideFlags: 0
