@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db10bfe2ba02cb47948297356eafd09, type: 3}
   m_Name: Car
   m_EditorClassIdentifier: 
-  Model: {fileID: 919132149155446097, guid: 1d2c39ce4163989409041d94c8073932, type: 3}
+  ModelLobby: {fileID: 919132149155446097, guid: 1d2c39ce4163989409041d94c8073932,
+    type: 3}
   ModelName: Car
+  PrefRace: {fileID: 8682036917791977859, guid: 0e207ca9ca2ddb048b50e44ea5b2cfbf,
+    type: 3}

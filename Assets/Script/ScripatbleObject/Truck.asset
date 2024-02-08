@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db10bfe2ba02cb47948297356eafd09, type: 3}
   m_Name: Truck
   m_EditorClassIdentifier: 
-  Model: {fileID: 919132149155446097, guid: dcab3be59a9876b468155a2834f9b80e, type: 3}
+  ModelLobby: {fileID: 919132149155446097, guid: dcab3be59a9876b468155a2834f9b80e,
+    type: 3}
   ModelName: Truck
+  PrefRace: {fileID: 4724995738097238220, guid: 0599a7ddd6b215843b27b8f4d2bf5090,
+    type: 3}

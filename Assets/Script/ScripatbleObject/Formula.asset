@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db10bfe2ba02cb47948297356eafd09, type: 3}
   m_Name: Formula
   m_EditorClassIdentifier: 
-  Model: {fileID: 919132149155446097, guid: 3e5a5d1631302a44c9182715361091d9, type: 3}
+  ModelLobby: {fileID: 973297986982799726, guid: 6ea2e2acbb4ed1c4cb8fd2b25aa128b8,
+    type: 3}
   ModelName: Formula
+  PrefRace: {fileID: 7980731911435207609, guid: a1af465b54bce8a4eb8626a1c93a899e,
+    type: 3}

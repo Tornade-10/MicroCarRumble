@@ -45,73 +45,95 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "e2abbced-e603-4fac-af1f-33ce3fac337e",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Forward",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "56ec2057-acb7-4f80-8536-c6edd1b88186",
+                    "id": "a70840a5-948f-4306-9721-5f1cda0dcccc",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "GamePad",
                     "action": "Forward",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b8a6c48a-eb81-4828-8bdd-dd82ca9e40fd",
+                    "id": "d73e8eb0-3f43-420d-b190-b5cfd41dd2a7",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "GamePad",
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "8c52cfff-a49d-4552-8fd4-681f2b8fb5ea",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c52d2833-d908-477e-a767-eaf743b8633d",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e8f0967c-d5dc-43d7-88d7-f1199b587719",
+                    "id": "7cbdfda3-7ec0-435f-a0c4-d5bcd200a5f1",
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "GamePad",
                     "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "6a3611e9-1da7-4859-945c-d83e30877dee",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "LookBehind",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76a7ac6a-644a-412e-872f-982833c0cd5f",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "LookBehind",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8583982b-c3da-4be1-8117-36d0fbcace52",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Forward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc8c45ce-940a-4989-9caa-6322c2fda330",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b48a62a5-6f56-43b6-9b18-e705adc99d59",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
-                    "id": "01720afd-0582-422a-9de3-dc300fde1191",
+                    "id": "8e455433-5eb4-4d73-a7c5-d017c1b6e30b",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -122,55 +144,33 @@
                 },
                 {
                     "name": "negative",
-                    "id": "c5b0a3dd-1a6f-4aeb-9697-e48dc727bf13",
+                    "id": "e26975f9-83ec-4e6b-8d2a-15bcde2bb122",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "4697cd3b-eb86-4289-8f65-f8d97920e8c3",
+                    "id": "1ee9b34a-bae6-4c42-a381-98ffeb1f97cb",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "Steer",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "2bdf2e59-beba-4232-b38e-7c00fbfb7f57",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LookBehind",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7c789564-416a-4276-9912-c9e26f77240a",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LookBehind",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a1121c33-a43e-4f82-bb96-c767081cd931",
+                    "id": "3e360fe8-da83-4238-b2aa-ddd4fe681c85",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "LookBehind",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -212,18 +212,29 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "35869d80-7890-449c-8c6b-7d00b5cff3d8",
+                    "id": "69b9acd8-7d5e-427a-8c76-23a5709158d0",
+                    "path": "<Gamepad>/dpad/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "ChangeCar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11e515f1-4bb9-45f6-93f5-5aab3da57cbf",
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "GamePad",
                     "action": "ChangeCar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "A/D",
-                    "id": "6f8ea4ae-0ac2-41f6-8a2a-c63c51c5f3ac",
+                    "id": "7b45c144-7052-4285-bcb8-8bacb19e2e7b",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -234,77 +245,77 @@
                 },
                 {
                     "name": "negative",
-                    "id": "9eaab690-791f-4672-a6e5-210b6e18c7aa",
+                    "id": "89230a4d-7a2e-479c-b66c-8492653cbcf2",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "ChangeCar",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "79604aff-15f0-4571-95c8-07261f63cd46",
+                    "id": "a6127a5f-2c22-4d69-b724-132b46d46861",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "ChangeCar",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "e1233a58-e3db-40a3-9870-a3d6697aef62",
+                    "id": "c2e650be-7ba4-4212-939e-edde9836853c",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "GamePad",
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "d19b89c3-7890-4748-b791-827d11602383",
+                    "id": "a1ad5c0c-d4fa-4e26-889e-ff7a5f386311",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "f14b183c-efab-4bfb-bb2c-4b16206ce478",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Join",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b072cd8c-99fe-4f87-b7e9-f343cece15e8",
+                    "id": "ffcfadb3-c98e-4e87-8251-f7b851db5c37",
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "GamePad",
                     "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "255736ba-5e5e-41e8-bfc1-8b1d2b7a69e8",
+                    "id": "7f6b0570-6664-457f-9e49-4524dbce3a78",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2b5fab6-9ac2-41b3-bc56-8c39a09c08b1",
                     "path": "<Keyboard>/anyKey",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyBoard",
                     "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -312,5 +323,28 @@
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "GamePad",
+            "bindingGroup": "GamePad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "KeyBoard",
+            "bindingGroup": "KeyBoard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

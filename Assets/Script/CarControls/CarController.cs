@@ -1,12 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-using Vector2 = System.Numerics.Vector2;
 
 public class CarController : MonoBehaviour
 {
@@ -44,7 +40,7 @@ public class CarController : MonoBehaviour
    public CinemachineVirtualCamera backCamera;
    public CinemachineVirtualCamera frontCamera;
 
-   public int debugCamera;
+   public int cameraNumber;
    
    private int _activePriority = 15;
    private int _inactivePriority = 10;
@@ -54,13 +50,13 @@ public class CarController : MonoBehaviour
       //_controller = GetComponent<InputManager>();
       carRB = GetComponent<Rigidbody>();
       carRB.centerOfMass = _centerOfMass;
-      SplitCamera();
    }
 
    private void Update()
    {
       AnimationsWheels();
       CameraLook();
+      SplitCamera();
    }
 
    private void FixedUpdate()
@@ -150,9 +146,9 @@ public class CarController : MonoBehaviour
 
    void SplitCamera()
    {
-      // backCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + debugCamera);
-      // frontCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + debugCamera);
-      //camera.cullingMask = LayerMask.NameToLayer("CamPlayer" + debugCamera);
+      //set the layer of both the virtual camera depending on the player
+       backCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + (cameraNumber + 1));
+       frontCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + (cameraNumber + 1));
    }
    
 }

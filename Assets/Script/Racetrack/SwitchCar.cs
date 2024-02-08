@@ -1,3 +1,4 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,13 +19,20 @@ public class SwitchCar : MonoBehaviour
         }
     }
     
-    public void SetProfile(PlayerSetup profile)
+    public void SetProfile(PlayerSetup setup)
     {
-        _profile = profile.Profile;
+        _profile = setup.Profile;
         // ShapeShifting
         Destroy(body);
-        body = Instantiate(_profile.Model, transform);
+        body = Instantiate(_profile.PrefRace, transform);
         // Input rebinding
-        playerInput.SwitchCurrentControlScheme(profile.ControlScheme, profile.Devices);
+        playerInput.SwitchCurrentControlScheme(setup.ControlScheme, setup.Devices);
+
+        //add a new culling mask depending on wich car it is
+        playerInput.camera.cullingMask |= 1 << LayerMask.NameToLayer("CamPlayer" + (setup.playerIndex + 1));
+        
+        //get each player and set they player index  
+        CarController carController = body.GetComponent<CarController>();
+        carController.cameraNumber = setup.playerIndex;
     }
 }

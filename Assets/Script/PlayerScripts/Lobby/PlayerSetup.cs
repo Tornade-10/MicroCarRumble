@@ -37,7 +37,7 @@ public class PlayerSetup : MonoBehaviour
     private void LoadNewModel()
     {
         Destroy(body);
-        body = Instantiate(profiles[_modelIndex].Model, transform);
+        body = Instantiate(profiles[_modelIndex].ModelLobby, transform);
     }
     
     void OnChangeCar(InputValue value)
