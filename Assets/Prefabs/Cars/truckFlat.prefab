@@ -597,8 +597,8 @@ MonoBehaviour:
   moveInput: 0
   steerInput: 0
   lookInput: 0
-  backCamera: {fileID: 0}
-  frontCamera: {fileID: 0}
+  backCamera: {fileID: 4737971327607805532}
+  frontCamera: {fileID: 4766829317533925716}
 --- !u!1 &4713664908349177927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,7 +1238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8493490964948180343}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000035165582, y: 0.973249, z: -0.22975291, w: -0.000000014896379}
+  m_LocalRotation: {x: 0.000000004907863, y: 0.973249, z: -0.22975293, w: 0.00000002079004}
   m_LocalPosition: {x: 0, y: 2, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

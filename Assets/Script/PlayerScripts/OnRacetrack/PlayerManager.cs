@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        _playerInputManager = FindObjectOfType<PlayerInputManager>();
+        _playerInputManager = FindAnyObjectByType<PlayerInputManager>();
     }
 
     private void OnEnable()
@@ -50,4 +50,7 @@ public class PlayerManager : MonoBehaviour
         //set the action in the custom cinemachine Input Handler
         //playerParent.GetComponentInChildren<InputHandler>().horizontal = player.actions.FindAction("Look");
     }
+    
+    
+    
 }

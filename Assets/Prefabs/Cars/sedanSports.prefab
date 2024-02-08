@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3363457444203752717}
   - component: {fileID: 64169017913868942}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7578364822866764277}
   - component: {fileID: 6984817932549636395}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4123782465777318113}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000015178621, y: 0.973249, z: -0.22975293, w: 0.000000064297666}
+  m_LocalRotation: {x: 0.000000006754197, y: 0.973249, z: -0.22975291, w: 0.00000002861125}
   m_LocalPosition: {x: -0.00000035762787, y: 2, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 12972393919420459}
   - component: {fileID: 2135904262908577636}
   - component: {fileID: 2307135679810922182}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,8 +1301,9 @@ MonoBehaviour:
   moveInput: 0
   steerInput: 0
   lookInput: 0
-  backCamera: {fileID: 0}
-  frontCamera: {fileID: 0}
+  backCamera: {fileID: 64169017913868942}
+  frontCamera: {fileID: 6984817932549636395}
+  debugCamera: 0
 --- !u!1 &8737458138702390853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1403,7 @@ GameObject:
   - component: {fileID: 2964346825596909404}
   - component: {fileID: 640393197633334742}
   - component: {fileID: 6331689976561507212}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
