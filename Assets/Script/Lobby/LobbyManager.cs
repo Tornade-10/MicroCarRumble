@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -28,9 +27,10 @@ public class LobbyManager : MonoBehaviour
         if (input.gameObject.TryGetComponent<PlayerSetup>(out var setup))
         {
             //sapwn a player at a spawn point
-            setup.transform.position = _spawnPoints[input.playerIndex].transform.position;
+            var spawnPoint = setup.transform;
+            spawnPoint.position = _spawnPoints[input.playerIndex].transform.position;
             //give the player the rotation of the spawn point
-            setup.transform.rotation = _spawnPoints[input.playerIndex].transform.rotation;
+            spawnPoint.rotation = _spawnPoints[input.playerIndex].transform.rotation;
             
             setup.BindInput(input);
 
@@ -68,7 +68,8 @@ public class LobbyManager : MonoBehaviour
                 setup.gameObject.SetActive(false);
             }
             Debug.Log("Loading the game scene");
-            SceneManager.LoadScene("SampleScene");
+            //load the race track
+            SceneManager.LoadScene("Office");
         }
     }
 }

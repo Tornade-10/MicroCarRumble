@@ -12,16 +12,17 @@ public class SpawnPlayer : MonoBehaviour
     {
         _spawnPoints = GetComponentsInChildren<SpawnPoint>().ToList();
         
-        List<PlayerSetup> setUps = FindObjectsByType<PlayerSetup>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
+        List<PlayerSetup> setups = FindObjectsByType<PlayerSetup>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
         
-        for (int i = 0; i < setUps.Count; i++)
+        //put a car on a spawnpoint depending on the player
+        for (int i = 0; i < setups.Count; i++)
         {
-            Transform t = _spawnPoints[i % _spawnPoints.Count].transform;
-            GameObject newCar = Instantiate(carPrefab, t.position, t.rotation);
+            Transform spawnPoint = _spawnPoints[i % _spawnPoints.Count].transform;
+            GameObject newCar = Instantiate(carPrefab, spawnPoint.position, spawnPoint.rotation);
 
             if (newCar.TryGetComponent<SwitchCar>(out var shape))
             {
-                shape.SetProfile(setUps[i]);
+                shape.SetProfile(setups[i]);
             }
         }
     }

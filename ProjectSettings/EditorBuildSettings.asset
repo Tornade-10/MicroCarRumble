@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby/Lobby.unity
     guid: 4135b9edbc459de48b40301ef5cf3289
   - enabled: 1
+    path: Assets/Scenes/Racetracks/Office.unity
+    guid: 57e8691a404996f44a6d7f30e1661e00
+  - enabled: 1
     path: Assets/Scenes/SampleScene/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

@@ -994,10 +994,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea63bd4ea6658143a3a84dc9be02e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAceleration: 270
+  maxAceleration: 260
   brakeAcceleration: 50
   turnSensitivity: 1
-  maxSteerAngle: 45
+  maxSteerAngle: 25
   _centerOfMass: {x: 0, y: 0, z: 0}
   wheels:
   - WheelModel: {fileID: 1461050542833894733}
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   lookInput: 0
   backCamera: {fileID: 5605608705638295026}
   frontCamera: {fileID: 8426538658547881695}
-  debugCamera: 0
+  cameraNumber: 0
 --- !u!1 &7998963817693473199
 GameObject:
   m_ObjectHideFlags: 0

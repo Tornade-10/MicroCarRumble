@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
+    //give a color on the gizmo
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;

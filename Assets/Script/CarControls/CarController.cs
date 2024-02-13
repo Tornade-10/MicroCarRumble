@@ -3,30 +3,34 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class CarController : MonoBehaviour
 {
+   //creat two axel
    public enum Axel
    {
       Front,
       Rear
    }
    
-   [Serializable] 
+   //creat a list of wheel
    public struct Wheel
    {
-      public GameObject WheelModel;
+      public GameObject wheelModel;
       public WheelCollider wheelCollider;
       public Axel axel;
    }
-
+   
+   //the default value for the wheel rpm
    public float maxAceleration = 30.0f;
    public float brakeAcceleration = 50.0f;
 
+   //default value for how high angle can the wheel turn
    public float turnSensitivity = 1.0f;
    public float maxSteerAngle = 30.0f;
-
-   public Vector3 _centerOfMass;
+   
+   public Vector3 centerOfMass;
    
    public List<Wheel> wheels;
 
@@ -34,22 +38,24 @@ public class CarController : MonoBehaviour
    public float steerInput;
    public bool lookInput = false;
 
-   private Rigidbody carRB;
+   private Rigidbody _carRb;
 
-   //public Camera camera;
+   //get the two cinemachine virtual camera
    public CinemachineVirtualCamera backCamera;
    public CinemachineVirtualCamera frontCamera;
 
+   //get the player camera
    public int cameraNumber;
    
+   //some numbers to set the camera at the front or the back
    private int _activePriority = 15;
    private int _inactivePriority = 10;
    
    private void Start()
    {
-      //_controller = GetComponent<InputManager>();
-      carRB = GetComponent<Rigidbody>();
-      carRB.centerOfMass = _centerOfMass;
+      //set the center of mass to the midle and botom
+      _carRb = GetComponent<Rigidbody>();
+      _carRb.centerOfMass = centerOfMass;
    }
 
    private void Update()
@@ -67,7 +73,6 @@ public class CarController : MonoBehaviour
    
    
    // Forward
-
    void OnForward(InputValue value)
    {
       moveInput = value.Get<float>();
@@ -82,7 +87,6 @@ public class CarController : MonoBehaviour
    }
 
    // Steer
-   
    void OnSteer(InputValue value)
    {
       steerInput = value.Get<float>();
@@ -101,7 +105,6 @@ public class CarController : MonoBehaviour
    }
    
    // Brake
-   
    void OnBrake(InputValue value)
    {
       moveInput = value.Get<float>() * -0.5f;
@@ -112,7 +115,6 @@ public class CarController : MonoBehaviour
    }
 
    // Look
-   
    void OnLookBehind(InputValue value)
    {
       lookInput = value.isPressed;
@@ -132,6 +134,7 @@ public class CarController : MonoBehaviour
       }
    }
    
+   //set the angle of the wheel and the rotation
    void AnimationsWheels()
    {
       foreach (var wheel in wheels)
@@ -139,14 +142,14 @@ public class CarController : MonoBehaviour
          Quaternion rotation;
          Vector3 position;
          wheel.wheelCollider.GetWorldPose(out position, out rotation);
-         wheel.WheelModel.transform.position = position;
-         wheel.WheelModel.transform.rotation = rotation;
+         wheel.wheelModel.transform.position = position;
+         wheel.wheelModel.transform.rotation = rotation;
       }
    }
 
+   //set the layer of both the virtual camera depending on the player
    void SplitCamera()
    {
-      //set the layer of both the virtual camera depending on the player
        backCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + (cameraNumber + 1));
        frontCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + (cameraNumber + 1));
    }
