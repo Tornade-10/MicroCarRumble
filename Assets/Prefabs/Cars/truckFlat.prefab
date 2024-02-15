@@ -375,18 +375,18 @@ MonoBehaviour:
   brakeAcceleration: 50
   turnSensitivity: 1
   maxSteerAngle: 40
-  _centerOfMass: {x: 0, y: 0, z: 0}
+  centerOfMass: {x: 0, y: 0, z: 0}
   wheels:
-  - WheelModel: {fileID: 8564394675535906407}
+  - wheelModel: {fileID: 8564394675535906407}
     wheelCollider: {fileID: 8620746091342542680}
     axel: 0
-  - WheelModel: {fileID: 8107636044916546996}
+  - wheelModel: {fileID: 8107636044916546996}
     wheelCollider: {fileID: 5555551377489226805}
     axel: 0
-  - WheelModel: {fileID: 6928868563573818219}
+  - wheelModel: {fileID: 6928868563573818219}
     wheelCollider: {fileID: 951840458948117111}
     axel: 1
-  - WheelModel: {fileID: 7269811592086382732}
+  - wheelModel: {fileID: 7269811592086382732}
     wheelCollider: {fileID: 345095219504008224}
     axel: 1
   moveInput: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
   lookInput: 0
   backCamera: {fileID: 4737971327607805532}
   frontCamera: {fileID: 4766829317533925716}
-  debugCamera: 0
+  cameraNumber: 0
 --- !u!1 &4713664908349177927
 GameObject:
   m_ObjectHideFlags: 0

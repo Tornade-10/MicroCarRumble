@@ -998,18 +998,18 @@ MonoBehaviour:
   brakeAcceleration: 50
   turnSensitivity: 1
   maxSteerAngle: 25
-  _centerOfMass: {x: 0, y: 0, z: 0}
+  centerOfMass: {x: 0, y: 0, z: 0}
   wheels:
-  - WheelModel: {fileID: 1461050542833894733}
+  - wheelModel: {fileID: 1461050542833894733}
     wheelCollider: {fileID: 2507760584073610596}
     axel: 0
-  - WheelModel: {fileID: 1251288215364019431}
+  - wheelModel: {fileID: 1251288215364019431}
     wheelCollider: {fileID: 7321196707730304546}
     axel: 0
-  - WheelModel: {fileID: 3387379202528591682}
+  - wheelModel: {fileID: 3387379202528591682}
     wheelCollider: {fileID: 4418579253243167164}
     axel: 1
-  - WheelModel: {fileID: 3144565274700119466}
+  - wheelModel: {fileID: 3144565274700119466}
     wheelCollider: {fileID: 8450119591405895184}
     axel: 1
   moveInput: 0

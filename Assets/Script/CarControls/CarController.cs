@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class CarController : MonoBehaviour
 {
@@ -15,7 +14,8 @@ public class CarController : MonoBehaviour
    }
    
    //creat a list of wheel
-   public struct Wheel
+   [Serializable]
+   public struct Wheels
    {
       public GameObject wheelModel;
       public WheelCollider wheelCollider;
@@ -32,7 +32,7 @@ public class CarController : MonoBehaviour
    
    public Vector3 centerOfMass;
    
-   public List<Wheel> wheels;
+   public List<Wheels> wheels;
 
    public float moveInput;
    public float steerInput;
