@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    public BoxCollider boxCollider;
+
+    private CheckpointList _checkpointList;
     
     //give a color on the gizmo
     private void OnDrawGizmos()
@@ -15,8 +16,13 @@ public class CheckPoint : MonoBehaviour
     }
 
     //to be added, check point systeme
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("you passed a checkpoint");
+        _checkpointList.playerTroughCheckpoint(this);
+    }
+
+    public void SetCheckpointList(CheckpointList checkpointList)
+    {
+        this._checkpointList = checkpointList;
     }
 }
