@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpeedBoost
   layers:
   - Default
   - TransparentFX
@@ -13,13 +14,13 @@ TagManager:
   - UI
   - Player
   - Wheels
-  - 
+  - Checkpoint
   - CamPlayer1
   - CamPlayer2
   - CamPlayer3
   - CamPlayer4
   - 
-  - 
+  - SpeedBoost
   - 
   - 
   - 

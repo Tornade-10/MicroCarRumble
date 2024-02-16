@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
 
-    private CheckpointList _checkpointList;
-    
+    public CheckpointCount checkpointCount;
+
     //give a color on the gizmo
     private void OnDrawGizmos()
     {
@@ -15,14 +12,14 @@ public class CheckPoint : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, 0.25f);
     }
 
-    //to be added, check point systeme
     private void OnTriggerEnter(Collider other)
     {
-        _checkpointList.playerTroughCheckpoint(this);
+        checkpointCount.PlayerGoThroughCheckpoint(this);
     }
 
-    public void SetCheckpointList(CheckpointList checkpointList)
+    public void SetCheckpoint(CheckpointCount checkpointCount)
     {
-        this._checkpointList = checkpointList;
+        this.checkpointCount = checkpointCount;
     }
+    
 }

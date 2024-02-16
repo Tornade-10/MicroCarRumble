@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class CarController : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class CarController : MonoBehaviour
    public float steerInput;
    public bool lookInput = false;
 
+   public float boostSpeed = 10f;
+   
    private Rigidbody _carRb;
 
    //get the two cinemachine virtual camera
@@ -152,6 +155,16 @@ public class CarController : MonoBehaviour
    {
        backCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + (cameraNumber + 1));
        frontCamera.gameObject.layer = LayerMask.NameToLayer("CamPlayer" + (cameraNumber + 1));
+   }
+   
+   private void OnTriggerEnter(Collider other)
+   {
+      if (other.gameObject.CompareTag("SpeedBoost"))
+      {
+         // Calculate boost direction based on the speed boost object's forward vector
+         Vector3 boostDirection = other.transform.forward.normalized;
+         _carRb.velocity += boostDirection * boostSpeed / 15f;
+      }
    }
    
 }
