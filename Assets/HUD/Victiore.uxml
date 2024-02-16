@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; margin-top: 6%;">
+        <ui:Label text="YOU WON" style="-unity-text-align: middle-center; font-size: 150px; text-overflow: ellipsis; justify-content: center; align-self: center; align-items: center; color: rgb(255, 235, 0); -unity-font-definition: url(&apos;project://database/Assets/Imports/Fonts/pixelated/pixelated.ttf?fileID=12800000&amp;guid=9249bb358b52bcc49997c5a4ad62f32d&amp;type=3#pixelated&apos;); -unity-font-style: bold;" />
+    </ui:VisualElement>
+</ui:UXML>
