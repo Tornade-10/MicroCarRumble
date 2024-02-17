@@ -42,21 +42,27 @@ public class PlayerSetup : MonoBehaviour
     
     void OnChangeCar(InputValue value)
     {
-        //get the input value as a float
-        float v = value.Get<float>();
-        
-        //change the car depending on the input value
-        if (Mathf.Abs(v) == 1f)
+        if (ready == false)
         {
-            _modelIndex += Mathf.FloorToInt(v);
-            //put the car at the end of the line
-            if (_modelIndex < 0)
+            //get the input value as a float
+            float v = value.Get<float>();
+        
+            //change the car depending on the input value
+            if (Mathf.Abs(v) == 1f)
             {
-                _modelIndex = profiles.Count - 1;
-            }//put the car at the start of the line
-            else if(_modelIndex >= profiles.Count)
-            {
-                _modelIndex = 0;
+                
+                FindObjectOfType<AudioManager>().Play("ChangeCar");
+                
+                _modelIndex += Mathf.FloorToInt(v);
+                //put the car at the end of the line
+                if (_modelIndex < 0)
+                {
+                    _modelIndex = profiles.Count - 1;
+                }//put the car at the start of the line
+                else if(_modelIndex >= profiles.Count)
+                {
+                    _modelIndex = 0;
+                }
             }
         }
         
@@ -66,7 +72,15 @@ public class PlayerSetup : MonoBehaviour
 
     void OnConfirm(InputValue value)
     {
+        FindObjectOfType<AudioManager>().Play("Ready");
         ready = true;
+        onReady?.Invoke();
+    }
+
+    void OnUnconfirm(InputValue value)
+    {
+        FindObjectOfType<AudioManager>().Play("NotReady");
+        ready = false;
         onReady?.Invoke();
     }
 }

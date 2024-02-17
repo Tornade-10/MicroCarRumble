@@ -12,6 +12,7 @@ public class CheckpointCount : MonoBehaviour
     private List<CheckPoint> _checkPoints;
     private int _nextCheckpointIndex;
     private int _numberOfTurns;
+    private bool _isNextTurn = true;
 
     public GameObject player;
 
@@ -37,9 +38,10 @@ public class CheckpointCount : MonoBehaviour
 
     public void Update()
     {
-        if (_nextCheckpointIndex == _checkPoints.Count - 1)
+        if (_nextCheckpointIndex == _checkPoints.Count - 1 && _isNextTurn == true)
         {
             _numberOfTurns++;
+            _isNextTurn = false;
         }
 
         if (_numberOfTurns == 3)
@@ -54,6 +56,7 @@ public class CheckpointCount : MonoBehaviour
         {
             Debug.Log("CorrectCheckpoint " + checkPoint);
             _nextCheckpointIndex = (_nextCheckpointIndex + 1) % _checkPoints.Count;
+            _isNextTurn = true;
         }
         else
         {
@@ -65,7 +68,8 @@ public class CheckpointCount : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Respawn"))
         {
-            player.transform.position = _nextCheckpointIndex - 1;
+            player.transform.position = _checkPoints[_nextCheckpointIndex - 1].transform.position;
+            player.transform.rotation = _checkPoints[_nextCheckpointIndex - 1].transform.rotation;
         }
     }
 }

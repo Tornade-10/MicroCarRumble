@@ -440,6 +440,7 @@ MonoBehaviour:
   moveInput: 0
   steerInput: 0
   lookInput: 0
+  boostSpeed: 10
   backCamera: {fileID: 4737971327607805532}
   frontCamera: {fileID: 4766829317533925716}
   cameraNumber: 0
@@ -455,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da40dada566c24f4aa3c28c27973572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4074402338079605420}
 --- !u!1 &5723775030025224064
 GameObject:
   m_ObjectHideFlags: 0

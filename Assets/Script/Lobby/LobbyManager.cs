@@ -23,10 +23,10 @@ public class LobbyManager : MonoBehaviour
         //send a message in the consol when a player join
         Debug.Log("Player joined : " + input.playerIndex + " : " + input.gameObject + " : " + input.devices);
         
-        //if it get the compenent "PlayerSetup" it will start this loop
+        //creat a new player in the lobby
         if (input.gameObject.TryGetComponent<PlayerSetup>(out var setup))
         {
-            //sapwn a player at a spawn point
+            //spawn a player at a spawn point
             var spawnPoint = setup.transform;
             spawnPoint.position = _spawnPoints[input.playerIndex].transform.position;
             //give the player the rotation of the spawn point
@@ -34,6 +34,8 @@ public class LobbyManager : MonoBehaviour
             
             setup.BindInput(input);
 
+            FindObjectOfType<AudioManager>().Play("Join");
+            
             setup.onReady += CheckEveryoneIsReady;
             _joinedSetup.Add(setup);
             
